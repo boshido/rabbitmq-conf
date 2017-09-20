@@ -1,0 +1,25 @@
+{
+  "users":[
+    {
+      "name": "guest",
+      "password_hash": "Zp17fkbbbIwuEBOBZrrUQWU/XA/GETLgq4OgTtNpINEdvXuN",
+      "hashing_algorithm": "rabbit_password_hashing_sha256",
+      "tags": "administrator"
+    }
+  ],
+  "permissions":[
+    {
+      "user": "guest",
+      "vhost": "/",
+      "configure": ".*",
+      "write": ".*",
+      "read": ".*"
+    }
+  ],
+  "vhosts":[
+    {"name":"/"}
+  ],
+  "policies":[
+    {"vhost":"/","name":"ha","pattern":"", "definition":{"ha-mode":"all","ha-sync-mode":"automatic","ha-sync-batch-size":5}}
+  ]
+}
